@@ -180,6 +180,21 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Titles\Create.cshtml" />
+    <Content Include="Views\Titles\Delete.cshtml" />
+    <Content Include="Views\Titles\Details.cshtml" />
+    <Content Include="Views\Titles\Edit.cshtml" />
+    <Content Include="Views\Titles\Index.cshtml" />
+    <Content Include="Views\Salaries\Create.cshtml" />
+    <Content Include="Views\Salaries\Delete.cshtml" />
+    <Content Include="Views\Salaries\Details.cshtml" />
+    <Content Include="Views\Salaries\Edit.cshtml" />
+    <Content Include="Views\Salaries\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -187,11 +202,8 @@
     <Folder Include="Views\Departments\" />
     <Folder Include="Views\DeptEmps\" />
     <Folder Include="Views\DeptManagers\" />
-    <Folder Include="Views\Employees\" />
     <Folder Include="Views\LogAuditoriaSalarios\" />
     <Folder Include="Views\NominaContext\" />
-    <Folder Include="Views\Salaries\" />
-    <Folder Include="Views\Titles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
