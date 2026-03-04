@@ -1,89 +1,33 @@
-﻿using System;
+﻿using SistemaNomina.Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 namespace S8EvaluaciónPráctica2P.Models
 {
-    public class Title : Controller
+    [Table("titles")]
+    public class Title
     {
-        // GET: Title
-        public ActionResult Index()
-        {
-            return View();
-        }
+        [Key, Column(Order = 0)]
+        public int emp_no { get; set; }
 
-        // GET: Title/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+        [Key, Column(Order = 1)]
+        [StringLength(50)]
+        [Display(Name = "Título")]
+        public string title { get; set; }
 
-        // GET: Title/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+        [Key, Column(Order = 2)]
+        [DataType(DataType.Date)]
+        public DateTime from_date { get; set; }
 
-        // POST: Title/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
+        [DataType(DataType.Date)]
+        public DateTime? to_date { get; set; }
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Title/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Title/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Title/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Title/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        [ForeignKey("emp_no")]
+        public virtual Employee Employee { get; set; }
     }
 }
