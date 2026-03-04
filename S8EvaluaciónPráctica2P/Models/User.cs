@@ -4,86 +4,27 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace S8EvaluaciónPráctica2P.Models
 {
-    public class User : Controller
+    [Table("users")]
+    public class User
     {
-        // GET: User
-        public ActionResult Index()
-        {
-            return View();
-        }
+        [Key]
+        public int Id { get; set; }
 
-        // GET: User/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+        [Required]
+        [StringLength(50)]
+        public string Username { get; set; }
 
-        // GET: User/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+        [Required]
+        [StringLength(255)]
+        public string Password { get; set; }
 
-        // POST: User/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: User/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: User/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: User/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: User/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        [Required]
+        [StringLength(20)]
+        public string Role { get; set; }
     }
 }
