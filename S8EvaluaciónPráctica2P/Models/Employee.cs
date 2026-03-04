@@ -34,5 +34,7 @@ namespace SistemaNomina.Models
 
         [StringLength(100)]
         public string Correo { get; set; }
+
+
     }
 }
