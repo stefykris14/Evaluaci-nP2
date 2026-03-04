@@ -200,12 +200,20 @@
     <Content Include="Views\DeptManagers\Details.cshtml" />
     <Content Include="Views\DeptManagers\Edit.cshtml" />
     <Content Include="Views\DeptManagers\Index.cshtml" />
+    <Content Include="Views\DeptEmps\Create.cshtml" />
+    <Content Include="Views\DeptEmps\Delete.cshtml" />
+    <Content Include="Views\DeptEmps\Details.cshtml" />
+    <Content Include="Views\DeptEmps\Edit.cshtml" />
+    <Content Include="Views\DeptEmps\Index.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Dashboard\" />
-    <Folder Include="Views\Departments\" />
-    <Folder Include="Views\DeptEmps\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
