@@ -3,87 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Linq;
+using System.Web.Mvc;
+using SistemaNomina.Models;
 
-namespace S8EvaluaciónPráctica2P.Controllers
+namespace SistemaNomina.Controllers
 {
     public class AccountController : Controller
     {
-        // GET: Account
-        public ActionResult Index()
+        private NominaContext db = new NominaContext();
+
+        public ActionResult Login()
         {
             return View();
         }
 
-        // GET: Account/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Account/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Account/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Login(string usuario, string clave)
         {
-            try
+            // IMPORTANTE: En producción, usa hash para las contraseñas
+            var user = db.Users.FirstOrDefault(u => u.Usuario == usuario && u.Clave == clave);
+            if (user != null)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                Session["Usuario"] = user.Usuario;
+                Session["EmpNo"] = user.EmpNo;
+                return RedirectToAction("Index", "Dashboard");
             }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Account/Edit/5
-        public ActionResult Edit(int id)
-        {
+            ViewBag.Error = "Usuario o contraseña incorrectos.";
             return View();
         }
 
-        // POST: Account/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Logout()
         {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Account/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Account/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            Session.Clear();
+            return RedirectToAction("Login");
         }
     }
 }
