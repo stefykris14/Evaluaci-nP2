@@ -195,13 +195,17 @@
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\DeptManagers\Create.cshtml" />
+    <Content Include="Views\DeptManagers\Delete.cshtml" />
+    <Content Include="Views\DeptManagers\Details.cshtml" />
+    <Content Include="Views\DeptManagers\Edit.cshtml" />
+    <Content Include="Views\DeptManagers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Dashboard\" />
     <Folder Include="Views\Departments\" />
     <Folder Include="Views\DeptEmps\" />
-    <Folder Include="Views\DeptManagers\" />
     <Folder Include="Views\LogAuditoriaSalarios\" />
     <Folder Include="Views\NominaContext\" />
   </ItemGroup>
