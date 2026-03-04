@@ -1,89 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace S8EvaluaciónPráctica2P.Models
+namespace SistemaNomina.Models
 {
-    public class Employee : Controller
+    [Table("employees")]
+    public class Employee
     {
-        // GET: Employee
-        public ActionResult Index()
-        {
-            return View();
-        }
+        [Key]
+        [Column("emp_no")]
+        public int EmpNo { get; set; }
 
-        // GET: Employee/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+        [Required, StringLength(50)]
+        public string CI { get; set; }
 
-        // GET: Employee/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+        [StringLength(50)]
+        [Column("birth_date")]
+        public string BirthDate { get; set; }
 
-        // POST: Employee/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
+        [Required, StringLength(50)]
+        [Column("first_name")]
+        public string FirstName { get; set; }
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        [Required, StringLength(50)]
+        [Column("last_name")]
+        public string LastName { get; set; }
 
-        // GET: Employee/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+        [Required, StringLength(1)]
+        public string Gender { get; set; }
 
-        // POST: Employee/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
+        [Required, StringLength(50)]
+        [Column("hire_date")]
+        public string HireDate { get; set; }
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Employee/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Employee/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        [StringLength(100)]
+        public string Correo { get; set; }
     }
 }
