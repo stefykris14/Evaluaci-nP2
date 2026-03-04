@@ -206,8 +206,6 @@
     <Folder Include="Views\Dashboard\" />
     <Folder Include="Views\Departments\" />
     <Folder Include="Views\DeptEmps\" />
-    <Folder Include="Views\LogAuditoriaSalarios\" />
-    <Folder Include="Views\NominaContext\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
