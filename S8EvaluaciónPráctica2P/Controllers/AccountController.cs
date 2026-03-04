@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Linq;
-using System.Web.Mvc;
 using SistemaNomina.Models;
+using S8EvaluaciónPráctica2P.Models;
 
-namespace SistemaNomina.Controllers
+namespace S8EvaluaciónPráctica2P.Controllers
 {
     public class AccountController : Controller
     {
@@ -19,17 +18,20 @@ namespace SistemaNomina.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(string usuario, string clave)
+        public ActionResult Login(string username, string password)
         {
-            // IMPORTANTE: En producción, usa hash para las contraseñas
-            var user = db.Users.FirstOrDefault(u => u.Usuario == usuario && u.Clave == clave);
+            var user = db.Users
+                .FirstOrDefault(u => u.Username == username && u.Password == password);
+
             if (user != null)
             {
-                Session["Usuario"] = user.Usuario;
-                Session["EmpNo"] = user.EmpNo;
+                Session["UserId"] = user.Id;
+                Session["Username"] = user.Username;
+                Session["Role"] = user.Role;
                 return RedirectToAction("Index", "Dashboard");
             }
-            ViewBag.Error = "Usuario o contraseña incorrectos.";
+
+            ViewBag.Error = "Credenciales incorrectas";
             return View();
         }
 
