@@ -1,2 +1,16 @@
-﻿body {
+﻿.deptmanagers-container {
+    width: 900px;
+    margin: 40px auto;
 }
+
+.deptmanagers-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+}
+
+    .deptmanagers-table th,
+    .deptmanagers-table td {
+        border: 1px solid #333;
+        padding: 8px;
+    }

@@ -1,2 +1,16 @@
-﻿body {
+﻿.salary-container {
+    width: 900px;
+    margin: 40px auto;
 }
+
+.salary-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+}
+
+    .salary-table th,
+    .salary-table td {
+        border: 1px solid #333;
+        padding: 8px;
+    }
