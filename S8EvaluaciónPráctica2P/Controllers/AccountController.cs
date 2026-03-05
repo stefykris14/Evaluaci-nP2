@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
-using S8EvaluaciónPráctica2P.Models;
+using S8EvaluacionPractica2P.Models;
 
 namespace S8EvaluacionPractica2P.Controllers
 {

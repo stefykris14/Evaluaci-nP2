@@ -1,16 +1,101 @@
-﻿.deptemps-container {
-    width: 900px;
-    margin: 40px auto;
+﻿body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
 }
 
-.deptemps-table {
+/* NAVBAR */
+.navbar {
+    background-color: #1f2937;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+    .menu a:hover {
+        text-decoration: underline;
+    }
+
+.menu .logout {
+    color: #ff6b6b;
+}
+
+.menu .active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+/* CONTENIDO */
+.content {
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* BOTÓN */
+.btn-crear {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: not-allowed;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+/* TABLA */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.08);
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
-    background: #111;
 }
 
-    .deptemps-table th,
-    .deptemps-table td {
-        border: 1px solid #333;
-        padding: 8px;
+thead {
+    background-color: #1f2937;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+    button:first-child {
+        background-color: #10b981;
+        color: white;
+    }
+
+    button:last-child {
+        background-color: #ef4444;
+        color: white;
     }

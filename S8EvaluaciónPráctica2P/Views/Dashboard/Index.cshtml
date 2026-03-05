@@ -19,15 +19,15 @@
         </div>
 
         <nav class="menu">
-            <a href="#">Dashboard</a>
-            <a href="#">Empleados</a>
-            <a href="#">Departamentos</a>
-            <a href="#">Asignación Depto.</a>
-            <a href="#">Gerentes Depto.</a>
-            <a href="#">Títulos</a>
-            <a href="#">Salarios</a>
-            <a href="#">Auditoría</a>
-            <a href="#" class="logout">Cerrar Sesión</a>
+            <a href="@Url.Action("Index","Dashboard")">Dashboard</a>
+            <a href="@Url.Action("Index","Employees")">Empleados</a>
+            <a href="@Url.Action("Index","Departments")">Departamentos</a>
+            <a href="@Url.Action("Index","DeptEmps")">Asignación Depto.</a>
+            <a href="@Url.Action("Index","DeptManagers")">Gerentes Depto.</a>
+            <a href="@Url.Action("Index","Titles")">Títulos</a>
+            <a href="@Url.Action("Index","Salaries")">Salarios</a>
+            <a href="@Url.Action("Index","LogAuditoriaSalarios")">Auditoría</a>
+            <a href="@Url.Action("Logout","Account")" class="logout">Cerrar Sesión</a>
         </nav>
     </header>
 

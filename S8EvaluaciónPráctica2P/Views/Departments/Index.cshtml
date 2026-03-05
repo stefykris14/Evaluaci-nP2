@@ -1,104 +1,90 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f6f9;
+﻿@{
+    ViewData["Title"] = "Departamentos";
+    Layout = null; /* Independiente igual que tu Dashboard */
 }
 
-/* NAVBAR */
-.navbar {
-    background-color: #1f2937;
-    color: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Departamentos</title>
+    <link rel="stylesheet" href="~/Content/departments.css" />
+</head>
+<body>
 
-.menu a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 14px;
-}
+    <!-- NAVBAR SUPERIOR -->
+    <header class="navbar">
+        <div class="logo">
+            Nombre de la aplicación
+        </div>
 
-.menu a:hover {
-    text-decoration: underline;
-}
+        <nav class="menu">
+            <a href="@Url.Action("Index","Dashboard")">Dashboard</a>
+            <a href="@Url.Action("Index","Employees")">Empleados</a>
+            <a href="@Url.Action("Index","Departments")">Departamentos</a>
+            <a href="@Url.Action("Index","DeptEmps")">Asignación Depto.</a>
+            <a href="@Url.Action("Index","DeptManagers")">Gerentes Depto.</a>
+            <a href="@Url.Action("Index","Titles")">Títulos</a>
+            <a href="@Url.Action("Index","Salaries")">Salarios</a>
+            <a href="@Url.Action("Index","LogAuditoriaSalarios")">Auditoría</a>
+            <a href="@Url.Action("Logout","Account")" class="logout">Cerrar Sesión</a>
+        </nav>
+    </header>
 
-.menu .logout {
-    color: #ff6b6b;
-}
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+        <h1>Gestión de Departamentos</h1>
 
-.menu .active {
-    font-weight: bold;
-    border-bottom: 2px solid white;
-}
+        <button class="btn-crear" disabled>+ Nuevo Departamento</button>
 
-/* CONTENIDO */
-.content {
-    padding: 40px;
-}
+        <div class="cards">
 
-h1 {
-    margin-bottom: 20px;
-}
+            <div class="card">
+                <h3>Recursos Humanos</h3>
+                <p>Gestión del talento y bienestar laboral.</p>
+                <span>12 empleados</span>
 
-/* BOTÓN */
-.btn-crear {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    cursor: not-allowed;
-    opacity: 0.7;
-    margin-bottom: 30px;
-}
+                <div class="actions">
+                    <button disabled>Editar</button>
+                    <button disabled>Eliminar</button>
+                </div>
+            </div>
 
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
+            <div class="card">
+                <h3>Finanzas</h3>
+                <p>Administración contable y financiera.</p>
+                <span>8 empleados</span>
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.08);
-}
+                <div class="actions">
+                    <button disabled>Editar</button>
+                    <button disabled>Eliminar</button>
+                </div>
+            </div>
 
-.card h3 {
-    margin-top: 0;
-}
+            <div class="card">
+                <h3>Tecnología</h3>
+                <p>Desarrollo y soporte técnico.</p>
+                <span>15 empleados</span>
 
-.card span {
-    display: block;
-    margin: 10px 0;
-    font-size: 14px;
-    color: gray;
-}
+                <div class="actions">
+                    <button disabled>Editar</button>
+                    <button disabled>Eliminar</button>
+                </div>
+            </div>
 
-.actions {
-    margin-top: 10px;
-}
+            <div class="card">
+                <h3>Marketing</h3>
+                <p>Estrategias comerciales y publicidad.</p>
+                <span>6 empleados</span>
 
-.actions button {
-    padding: 6px 12px;
-    margin-right: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: not-allowed;
-    opacity: 0.7;
-}
+                <div class="actions">
+                    <button disabled>Editar</button>
+                    <button disabled>Eliminar</button>
+                </div>
+            </div>
 
-.actions button:first-child {
-    background-color: #10b981;
-    color: white;
-}
+        </div>
+    </main>
 
-.actions button:last-child {
-    background-color: #ef4444;
-    color: white;
-}
+</body>
+</html>

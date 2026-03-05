@@ -1,11 +1,82 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewData["Title"] = "Asignación de Departamentos";
+    Layout = null;
 }
 
-<div class="jumbotron">
-    <h1>Asignación a Departamentos</h1>
-    <p class="lead">
-        Registro de la relación empleado–
-        departamento con vigencias.
-    </p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Asignación de Departamentos</title>
+    <link rel="stylesheet" href="~/Content/deptemps.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            Nombre de la aplicación
+        </div>
+
+        <nav class="menu">
+            <a href="@Url.Action("Index","Dashboard")">Dashboard</a>
+            <a href="@Url.Action("Index","Employees")">Empleados</a>
+            <a href="@Url.Action("Index","Departments")">Departamentos</a>
+            <a href="@Url.Action("Index","DeptEmps")" class="active">Asignación Depto.</a>
+            <a href="@Url.Action("Index","DeptManagers")">Gerentes Depto.</a>
+            <a href="@Url.Action("Index","Titles")">Títulos</a>
+            <a href="@Url.Action("Index","Salaries")">Salarios</a>
+            <a href="@Url.Action("Index","LogAuditoriaSalarios")">Auditoría</a>
+            <a href="@Url.Action("Logout","Account")" class="logout">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+        <h1>Asignación de Empleados a Departamentos</h1>
+
+        <button class="btn-crear" disabled>+ Nueva Asignación</button>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Empleado</th>
+                        <th>Nombre</th>
+                        <th>Departamento</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>Juan Pérez</td>
+                        <td>Recursos Humanos</td>
+                        <td>01/01/2024</td>
+                        <td>Actual</td>
+                        <td>
+                            <button disabled>Editar</button>
+                            <button disabled>Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1002</td>
+                        <td>Ana López</td>
+                        <td>Finanzas</td>
+                        <td>15/02/2023</td>
+                        <td>Actual</td>
+                        <td>
+                            <button disabled>Editar</button>
+                            <button disabled>Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+</html>
