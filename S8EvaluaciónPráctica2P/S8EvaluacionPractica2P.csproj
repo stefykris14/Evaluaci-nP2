@@ -144,6 +144,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Departments.css" />
     <Content Include="Content\DeptEmps.css" />
     <Content Include="Content\DeptManagers.css" />
     <Content Include="Content\Employees.css" />
