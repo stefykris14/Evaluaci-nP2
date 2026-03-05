@@ -1,4 +1,4 @@
-﻿using S8EvaluaciónPráctica2P.Models;
+﻿using S8EvaluacionPractica2P.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

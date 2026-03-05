@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using S8EvaluaciónPráctica2P.Models;
 
-namespace S8EvaluaciónPráctica2P.Controllers
+namespace S8EvaluacionPractica2P.Controllers
 {
     public class DashboardController : Controller
     {

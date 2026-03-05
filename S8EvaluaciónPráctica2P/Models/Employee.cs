@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
-namespace SistemaNomina.Models
+namespace S8EvaluacionPractica2P.Models
 {
     [Table("employees")]
     public class Employee

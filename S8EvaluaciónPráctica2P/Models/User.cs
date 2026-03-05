@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace S8EvaluaciónPráctica2P.Models
+namespace S8EvaluacionPractica2P.Models
 {
     [Table("users")]
     public class User

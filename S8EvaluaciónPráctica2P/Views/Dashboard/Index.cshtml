@@ -1,11 +1,64 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = null; /* Cambia esto si usas _Layout.cshtml */
 }
 
-<div class="jumbotron">
-    <h1>DashBord</h1>
-    <p class="lead">Tabla de contenido de empleados, salarios, titulos y departamentos</p>
-   
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="~/Content/dashboard.css" />
+</head>
+<body>
 
+    <!-- NAVBAR SUPERIOR -->
+    <header class="navbar">
+        <div class="logo">
+            Nombre de la aplicación
+        </div>
+
+        <nav class="menu">
+            <a href="#">Dashboard</a>
+            <a href="#">Empleados</a>
+            <a href="#">Departamentos</a>
+            <a href="#">Asignación Depto.</a>
+            <a href="#">Gerentes Depto.</a>
+            <a href="#">Títulos</a>
+            <a href="#">Salarios</a>
+            <a href="#">Auditoría</a>
+            <a href="#" class="logout">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+        <h1>Bienvenido al Sistema de Nómina</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Empleados</h3>
+                <p>Gestión de empleados registrados.</p>
+            </div>
+
+            <div class="card">
+                <h3>Departamentos</h3>
+                <p>Administrar departamentos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Salarios</h3>
+                <p>Control de pagos y sueldos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Auditoría</h3>
+                <p>Registro de actividades del sistema.</p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

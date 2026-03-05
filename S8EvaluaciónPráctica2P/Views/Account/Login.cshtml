@@ -1,24 +1,32 @@
 ﻿@{
-    ViewBag.Title = "Iniciar Sesión";
-    Layout = null;
+    ViewBag.Title = "Autenticar";
 }
 
-<div style="max-width:400px; margin:100px auto; padding:30px; border:1px solid #ccc; border-radius:8px;">
-    <h2>Sistema de Nómina - Login</h2>
-    @if (ViewBag.Error != null)
-    {
-        <div class="alert alert-danger">@ViewBag.Error</div>
-    }
-    @using (Html.BeginForm())
-    {
-        <div class="form-group">
-            <label>Usuario</label>
-            <input type="text" name="usuario" class="form-control" required />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Content/css/login.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form action="@Url.Action("Autenticar", "Acceso")" method="post">
+        <h1>Acceso para Empleados</h1>
+        <div class="inset">
+            <p>
+                <label for="email">USUARIO</label>
+                <input type="text" name="correo" id="correo">
+            </p>
+            <p>
+                <label for="password">CLAVE</label>
+                <input type="password" name="clave" id="clave">
+            </p>
         </div>
-        <div class="form-group">
-            <label>Contraseña</label>
-            <input type="password" name="clave" class="form-control" required />
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-    }
-</div>
+        <p class="p-container">
+            <span>@Html.ActionLink("Registrar", "Registro", "Acceso", new { area = "" }, new { @class = "nav-link" })</span>
+            <input type="submit" value="Log in">
+        </p>
+    </form>
+</body>
+</html>

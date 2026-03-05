@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace S8EvaluaciónPráctica2P.Models
+namespace S8EvaluacionPractica2P.Models
 {
     public class NominaContext : DbContext
     {

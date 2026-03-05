@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace S8EvaluaciónPráctica2P.Models
+namespace S8EvaluacionPractica2P.Models
 {
     [Table("dept_manager")]
     public class DeptManager

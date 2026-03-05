@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace S8EvaluaciónPráctica2P.Controllers
+namespace S8EvaluacionPractica2P.Controllers
 {
     public class DeptEmpsController : Controller
     {

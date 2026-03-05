@@ -24,6 +24,7 @@ namespace S8EvaluaciónPráctica2P
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/Dashboard.css",
                       "~/Content/site.css"));
         }
     }
