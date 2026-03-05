@@ -144,12 +144,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\DeptEmps.css" />
+    <Content Include="Content\DeptManagers.css" />
+    <Content Include="Content\Employees.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Dashboard.css" />
+    <Content Include="Content\Salaries.css" />
+    <Content Include="Content\Titles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
