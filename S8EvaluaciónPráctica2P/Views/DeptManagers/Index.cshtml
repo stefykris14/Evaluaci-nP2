@@ -1,11 +1,87 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Gerentes de Departamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>Gerentes de departamento</h1>
-    <p class="lead">
-        Registro de los managers por
-        departamento con vigencias.
-    </p>
+<link rel="stylesheet" href="~/css/gerentes.css" />
+
+<div class="contenedor">
+
+    <h2>Gerencia de Departamentos</h2>
+    <p>Registro de managers por departamento con vigencias.</p>
+
+    <div class="formulario">
+
+        <div class="campo">
+            <label>Departamento</label>
+            <select>
+                <option>Seleccionar departamento</option>
+                <option>Sistemas</option>
+                <option>Recursos Humanos</option>
+                <option>Finanzas</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label>Manager</label>
+            <select>
+                <option>Seleccionar manager</option>
+                <option>Juan Pérez</option>
+                <option>María López</option>
+                <option>Carlos Torres</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label>Fecha Inicio</label>
+            <input type="date">
+        </div>
+
+        <div class="campo">
+            <label>Fecha Fin</label>
+            <input type="date">
+        </div>
+
+        <div class="botones">
+            <button class="btn guardar">Guardar</button>
+            <button class="btn actualizar">Actualizar</button>
+            <button class="btn eliminar">Eliminar</button>
+        </div>
+
+    </div>
+
+
+    <h3>Historial de Gerentes</h3>
+
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Departamento</th>
+                <th>Manager</th>
+                <th>Inicio</th>
+                <th>Fin</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Sistemas</td>
+                <td>Juan Pérez</td>
+                <td>2022-01-01</td>
+                <td>2023-01-01</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Finanzas</td>
+                <td>María López</td>
+                <td>2023-02-01</td>
+                <td>Actual</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>

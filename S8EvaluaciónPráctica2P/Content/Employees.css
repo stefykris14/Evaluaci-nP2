@@ -1,16 +1,124 @@
-﻿.employee-container {
-    width: 900px;
-    margin: 40px auto;
+﻿body {
+    background: #f4f6f9;
+    font-family: Arial;
 }
 
-.employee-form {
-    background: #111;
-    border: 1px solid #191919;
-    padding: 25px;
+.empleados-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.titulo {
+    font-size: 32px;
+    color: #2c3e50;
+}
+
+.subtitulo {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+.cards-resumen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    min-width: 180px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+    .card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+/* COLORES TARJETAS */
+
+.total {
+    background: linear-gradient(45deg,#3498db,#2980b9);
+}
+
+.sistemas {
+    background: linear-gradient(45deg,#9b59b6,#8e44ad);
+}
+
+.finanzas {
+    background: linear-gradient(45deg,#27ae60,#1e8449);
+}
+
+.rrhh {
+    background: linear-gradient(45deg,#f39c12,#d68910);
+}
+
+.ventas {
+    background: linear-gradient(45deg,#e74c3c,#c0392b);
+}
+
+.acciones {
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
     border-radius: 6px;
+    color: white;
+    margin-right: 10px;
+    font-weight: bold;
 }
 
-    .employee-form input {
-        width: 100%;
-        margin-bottom: 15px;
+.agregar {
+    background: #2ecc71;
+}
+
+.editar {
+    background: #3498db;
+}
+
+.eliminar {
+    background: #e74c3c;
+}
+
+.tabla-contenedor {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.tabla-empleados {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .tabla-empleados thead {
+        background: #2c3e50;
+        color: white;
+    }
+
+    .tabla-empleados th {
+        padding: 12px;
+    }
+
+    .tabla-empleados td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .tabla-empleados tr:hover {
+        background: #f2f2f2;
     }

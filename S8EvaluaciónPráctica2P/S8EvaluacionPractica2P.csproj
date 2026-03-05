@@ -202,7 +202,6 @@
     <Content Include="Views\Employees\Delete.cshtml" />
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
-    <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\DeptManagers\Create.cshtml" />
     <Content Include="Views\DeptManagers\Delete.cshtml" />
     <Content Include="Views\DeptManagers\Details.cshtml" />
@@ -219,6 +218,7 @@
     <Content Include="Views\Departments\Edit.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Departments\Index.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
